@@ -2,7 +2,10 @@
 
 import { useEffect, useState } from "react";
 
-const API_URL = "http://localhost:5000";
+// ✅ Use env var if available, otherwise fallback to localhost
+const API_URL =
+  process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+
 const MAX_LENGTH = 250;
 
 // Note colors (used for dots + note backgrounds)
